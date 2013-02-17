@@ -1,9 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <title>{% block title %}{% endblock %}</title>
+    {% block styles %}{% endblock %}
+    {% block top_scripts %}{% endblock %}
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts/jquery.js') }}" ></script>
 </head>
 <body>
-
+    <div>
+        <div id="divHeader"></div>
+        <div id="divTopNav"></div>
+        <div id="divLeftBar"></div>
+        <div id="divContent">
+            {% block content %}{% endblock %}
+        </div>
+        <div id="divFooter"></div>
+    </div>
+    <div>
+        {% block scripts %}{% endblock %}
+    </div>
 </body>
 </html>

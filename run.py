@@ -1,1 +1,4 @@
-__author__ = 'cain'
+from signal33_site import app
+
+
+app.run()
