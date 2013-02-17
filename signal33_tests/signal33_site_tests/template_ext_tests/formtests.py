@@ -13,5 +13,3 @@ class FormTest(unittest.TestCase):
     def test_input(self):
         self.assertEqual(form.form_input('test'), '<input type="text" id="test" name="test" />')
 
-
-unittest.main()
