@@ -3,5 +3,42 @@
 {% block styles %}{% endblock %}
 {% block top_scripts %}{% endblock %}
 {% block content %}
+<form id="frmRegister" name="frmRegister" action="{{ url_for('home.register') }}" method="post">
+    <label for="txtUserName">txtUserName</label>
+    <input type="text" id="txtUserName" name="txtUserName" />
+    <br />
+    <label for="txtFirstName">txtFirstName</label>
+    <input type="text" id="txtFirstName" name="txtFirstName" maxlength="50" />
+    <br />
+    <label for="txtLastName">txtLastName</label>
+    <input type="text" id="txtLastName" name="txtLastName" maxlength="50" />
+    <br />
+    <label for="txtEmailAddress">txtEmailAddress</label>
+    <input type="email" id="txtEmailAddress" name="txtEmailAddress" maxlength="50" />
+    <br />
+    <label for="txtConfirmEmailAddress">txtConfirmEmailAddress</label>
+    <input type="email" id="txtConfirmEmailAddress" name="txtConfirmEmailAddress" maxlength="50" />
+    <br />
+    <label for="txtStreet">txtStreet</label>
+    <input type="text" id="txtStreet" name="txtStreet" />
+    <br />
+    <label for="txtStreet2">txtStreet2</label>
+    <input type="text" id="txtStreet2" name="txtStreet2" />
+    <br />
+    <label for="txtCity">txtCity</label>
+    <input type="text" id="txtCity" name="txtCity" maxlength="50" />
+    <br />
 
+    <br />
+    <label for="txtZip">txtZip</label>
+    <input type="text" id="txtZip" name="txtZip" />
+    <br />
+    <label for="txtPassword">txtPassword</label>
+    <input type="password" id="txtPassword" name="txtPassword" />
+    <br />
+    <label for="txtConfirmPassword">txtConfirmPassword</label>
+    <input type="password" id="txtConfirmPassword" name="txtConfirmPassword" />
+    <br />
+    <input type="submit" id="btnSubmit" name="btnSubmit" value="Submit" />
+</form>
 {% endblock %}
